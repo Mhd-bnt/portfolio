@@ -323,8 +323,12 @@ ul > li > a:visited {
   color: #353535;
 }
 .competence-cart {
-  justify-items: center;
-  gap: 1rem;
+  width: min(110rem, 100%);
+  margin: 0 auto;
+  padding: 0 2rem;
+  justify-items: stretch;
+  align-items: stretch;
+  gap: 3rem;
 }
 .competence-cart-heading {
   text-align: center;
@@ -332,17 +336,36 @@ ul > li > a:visited {
 .cart-item {
   border-radius: 2.5rem;
   overflow: hidden;
-  padding: 5rem;
+  padding: 4rem;
   border: #e6ecf8 solid 0.1rem;
   background-color: #ffffffcf;
   flex-direction: column;
-  gap: 7rem;
+  gap: 3rem;
+  height: 100%;
+  text-align: center;
 }
 
 .cart-item-header {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+}
+.stack-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+}
+.stack-list > li {
+  padding: 0.8rem 1.2rem;
+  border-radius: 100rem;
+  border: 0.1rem solid #d4e1ff;
+  background-color: #e6ecf8;
+  color: #353535;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  white-space: nowrap;
 }
 .text-container {
   flex-direction: column;
@@ -450,10 +473,11 @@ ul > li > a:visited {
 }
 
 .about-table {
-  width: 130rem;
+  width: min(130rem, 100%);
   margin: 0 auto;
-  row-gap: 5rem;
-  column-gap: 4rem;
+  padding: 0 2rem;
+  gap: 4rem;
+  align-items: stretch;
 }
 .about-table-heading {
   text-align: center;
@@ -478,6 +502,7 @@ ul > li > a:visited {
   padding: 5rem;
   transition: ease-in-out 0.3s;
   border-radius: 1rem;
+  height: 100%;
 
   background-color: #ffffff93;
 
