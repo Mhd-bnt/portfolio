@@ -748,7 +748,7 @@ P {
 }
 .grid-2--col {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
 }
 .grid-3--col {
   display: grid;
@@ -756,6 +756,12 @@ P {
 }
 .grid-2--rows {
   grid-template-rows: 1fr 1fr;
+}
+
+@media (max-width: 48em) {
+  .grid-2--col {
+    grid-template-columns: 1fr;
+  }
 }
 .logo {
   width: 6.6rem;
