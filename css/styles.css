@@ -603,28 +603,28 @@ ul > li > a:visited {
   box-shadow: 0 0.1rem 0.5rem #888;
 }
 .panel1 {
-  background-image: url(/picture-for-section-project/Omnifood/omnifood-1.avif);
+  background-image: url('../assets/projects/omnifood-1.avif');
 }
 .panel2 {
-  background-image: url(/picture-for-section-project/Omnifood/omniffod-2.avif);
+  background-image: url('../assets/projects/omniffod-2.avif');
 }
 .panel3 {
-  background-image: url(/picture-for-section-project/Omnifood/omnifood-3.avif);
+  background-image: url('../assets/projects/omnifood-3.avif');
 }
 .panel4 {
-  background-image: url(/picture-for-section-project/Omnifood/omnifood-4.avif);
+  background-image: url('../assets/projects/omnifood-4.avif');
 }
 .panel5 {
-  background-image: url(/picture-for-section-project/Omnifood/omnifood-5.avif);
+  background-image: url('../assets/projects/omnifood-5.avif');
 }
 .panel6 {
-  background-image: url(/picture-for-section-project/One-chair/one-chair-2.avif);
+  background-image: url('../assets/projects/one-chair-2.avif');
 }
 .panel7 {
-  background-image: url(/picture-for-section-project/One-chair/one-chair-1.avif);
+  background-image: url('../assets/projects/one-chair-1.avif');
 }
 .panel8 {
-  background-image: url(/picture-for-section-project/Code-magazine/the-code-magazine.avif);
+  background-image: url('../assets/projects/the-code-magazine.avif');
 }
 .panel.active {
   flex: 7;
