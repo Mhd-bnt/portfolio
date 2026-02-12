@@ -80,6 +80,9 @@ body {
   line-height: 1;
   overflow-x: hidden;
 }
+:root {
+  --section-spacing: 12rem;
+}
 /* -------------------------*/
 /* HEADER SECTION START */
 /* -------------------------*/
@@ -267,7 +270,7 @@ ul > li > a:visited {
 /* COMPETENCE START*/
 /* -------------------------*/
 .section-competence {
-  margin-bottom: 15rem;
+  margin-bottom: var(--section-spacing);
 }
 .competence-header {
   flex-direction: column;
@@ -392,7 +395,7 @@ ul > li > a:visited {
 .about-me-section {
   width: 100%;
 
-  margin-bottom: 15rem;
+  margin-bottom: var(--section-spacing);
   flex-direction: column;
   align-items: center;
   position: relative;
@@ -543,8 +546,11 @@ ul > li > a:visited {
 .project-section {
   padding-top: 15rem;
   text-align: center;
-  margin-bottom: 60rem;
+  margin-bottom: var(--section-spacing);
   align-items: center;
+}
+#projet {
+  margin-bottom: 58rem;
 }
 .project-article-container {
   width: 100%;
@@ -628,28 +634,28 @@ ul > li > a:visited {
   box-shadow: 0 0.1rem 0.5rem #888;
 }
 .panel1 {
-  background-image: url('../assets/projects/omnifood-1.avif');
+  background-image: url("../assets/projects/omnifood-1.avif");
 }
 .panel2 {
-  background-image: url('../assets/projects/omniffod-2.avif');
+  background-image: url("../assets/projects/omniffod-2.avif");
 }
 .panel3 {
-  background-image: url('../assets/projects/omnifood-3.avif');
+  background-image: url("../assets/projects/omnifood-3.avif");
 }
 .panel4 {
-  background-image: url('../assets/projects/omnifood-4.avif');
+  background-image: url("../assets/projects/omnifood-4.avif");
 }
 .panel5 {
-  background-image: url('../assets/projects/omnifood-5.avif');
+  background-image: url("../assets/projects/omnifood-5.avif");
 }
 .panel6 {
-  background-image: url('../assets/projects/one-chair-2.avif');
+  background-image: url("../assets/projects/one-chair-2.avif");
 }
 .panel7 {
-  background-image: url('../assets/projects/one-chair-1.avif');
+  background-image: url("../assets/projects/one-chair-1.avif");
 }
 .panel8 {
-  background-image: url('../assets/projects/the-code-magazine.avif');
+  background-image: url("../assets/projects/the-code-magazine.avif");
 }
 .panel.active {
   flex: 7;
@@ -856,6 +862,7 @@ P {
 }
 footer {
   position: relative;
+  margin-top: 12rem;
   gap: 4.5rem;
   justify-content: center;
 
