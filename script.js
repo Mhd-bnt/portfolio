@@ -1,14 +1,14 @@
 // NAV-BAR
 
+const nav = document.getElementById("nav");
+
 window.addEventListener("scroll", function () {
-  if (
-    document.body.scrollTop > 350 ||
-    document.documentElement.scrollTop > 350
-  ) {
-    document.getElementById("nav").style.boxShadow =
-      "rgb(136, 136, 136) 0px 0.1rem 1rem";
+  if (!nav) return;
+
+  if (window.scrollY > 350) {
+    nav.style.boxShadow = "0px 0.1rem 1rem var(--color-shadow)";
   } else {
-    document.getElementById("nav").style.boxShadow = "none";
+    nav.style.boxShadow = "none";
   }
 });
 
@@ -37,4 +37,31 @@ btnNav.addEventListener("click", function () {
 });
 navLinks.addEventListener("click", function () {
   header.classList.toggle("nav-open");
+});
+
+// THEME TOGGLE
+const themeToggle = document.getElementById("theme-toggle");
+const themeToggleIcon = themeToggle?.querySelector("ion-icon");
+
+function updateThemeToggleIcon() {
+  if (!themeToggleIcon) return;
+
+  const iconName = document.body.classList.contains("dark-mode")
+    ? "sunny-outline"
+    : "moon-outline";
+  themeToggleIcon.setAttribute("name", iconName);
+}
+
+function applyTheme(theme) {
+  const isDark = theme === "dark";
+  document.body.classList.toggle("dark-mode", isDark);
+  updateThemeToggleIcon();
+}
+
+applyTheme(localStorage.getItem("theme") || "light");
+
+themeToggle?.addEventListener("click", function () {
+  const isDarkMode = document.body.classList.toggle("dark-mode");
+  localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+  updateThemeToggleIcon();
 });

@@ -67,7 +67,7 @@ Medium: 11px
 }
 *:focus {
   outline: none;
-  box-shadow: 0 0 0 0.5rem rgb(0 0 255 / 30%);
+  box-shadow: 0 0 0 0.5rem var(--color-focus-ring);
 }
 html {
   font-size: 62.5%;
@@ -78,6 +78,8 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   overflow-x: hidden;
 }
 :root {
@@ -111,7 +113,7 @@ nav {
 .hamburger-menu {
   width: 4rem;
   height: 4rem;
-  color: #0b60b0;
+  color: var(--color-primary);
 }
 
 .hamburger-menu[name="close-menu"] {
@@ -125,7 +127,7 @@ nav {
   padding: 2rem 4.8rem;
   font-weight: 300;
   width: 70%;
-  background-color: #ffffffe2;
+  background-color: var(--color-surface-nav);
 }
 .logo-header {
   font-weight: 400;
@@ -134,13 +136,13 @@ nav {
   gap: 2rem;
 }
 .logo-header-svg {
-  fill: #353535;
+  fill: var(--color-text);
   width: 3.6rem;
   height: 3.6rem;
 }
 
 .logo-name {
-  color: #353535;
+  color: var(--color-text);
   font-size: 2.4rem;
   font-weight: 500;
 }
@@ -160,15 +162,31 @@ ul > li > a:link:hover,
 ul > li > a:visited:hover {
   transition: 0.1s;
 
-  color: #0b60b0;
+  color: var(--color-primary);
   text-decoration: underline;
 }
 ul > li > a:link,
 ul > li > a:visited {
   text-decoration: none;
-  color: #000;
+  color: var(--color-text-strong);
   font-size: 1.8rem;
   font-weight: 300;
+}
+#theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem;
+  border: none;
+  background: transparent;
+  color: var(--color-text-strong);
+  cursor: pointer;
+}
+#theme-toggle:hover {
+  color: var(--color-primary);
+}
+#theme-toggle ion-icon {
+  font-size: 2.2rem;
 }
 /* -------------------------*/
 /* HEADER SECTION END */
@@ -188,7 +206,7 @@ ul > li > a:visited {
 .hero-img {
   display: flex;
   justify-content: center;
-  background: #cedfef;
+  background: var(--color-hero-circle);
 
   border-radius: 100%;
   width: 40rem;
@@ -220,11 +238,11 @@ ul > li > a:visited {
 }
 .hero-p-1 {
   font-size: 1.6rem;
-  color: #353535;
+  color: var(--color-text);
 }
 .hero-p-2 {
   font-size: 2.4rem;
-  color: #353535;
+  color: var(--color-text);
 }
 .hero-description > p {
   align-self: center;
@@ -247,21 +265,21 @@ ul > li > a:visited {
 }
 .social-logo {
   transform: scale(2);
-  background-color: #fff;
+  background-color: var(--color-surface-solid);
   width: 2.6rem;
   height: 2.6rem;
 
   cursor: pointer;
-  fill: #6da0d0;
+  fill: var(--color-accent);
   padding: 0.2rem;
-  border: #0b60b0 solid 0.3rem;
+  border: var(--color-primary) solid 0.3rem;
   border-radius: 48%;
   transition: 0.4s ease-in;
-  border-color: #6da0d0;
+  border-color: var(--color-border-accent);
 }
 .social-logo:hover {
   transform: scale(3);
-  fill: #0b60b0;
+  fill: var(--color-primary);
 }
 /* -------------------------*/
 /* HERO END*/
@@ -287,7 +305,7 @@ ul > li > a:visited {
 }
 
 .competence-header > p {
-  color: #353535;
+  color: var(--color-text);
 }
 
 .competence-text-container {
@@ -303,27 +321,27 @@ ul > li > a:visited {
 .competence-text-box {
   height: 100%;
   position: relative;
-  background-color: #ffffffcf;
+  background-color: var(--color-surface);
   padding: 2.4rem;
   border-radius: 1rem;
-  box-shadow: 0 0.1rem 0.5rem #888;
+  box-shadow: 0 0.1rem 0.5rem var(--color-shadow);
 }
 .competence-text-box > h3 {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: 0 0.1rem 0.5rem #888;
+  box-shadow: 0 0.1rem 0.5rem var(--color-shadow);
   border-radius: 2.5rem;
   padding: 1.5rem;
   width: 75%;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: var(--color-surface-solid);
 }
 .competence-text-box p {
   margin-top: 3rem;
 
-  color: #353535;
+  color: var(--color-text);
 }
 .competence-cart {
   width: min(110rem, 100%);
@@ -340,8 +358,8 @@ ul > li > a:visited {
   border-radius: 2.5rem;
   overflow: hidden;
   padding: 4rem;
-  border: #e6ecf8 solid 0.1rem;
-  background-color: #ffffffcf;
+  border: var(--color-border-subtle) solid 0.1rem;
+  background-color: var(--color-surface);
   flex-direction: column;
   gap: 3rem;
   height: 100%;
@@ -363,9 +381,9 @@ ul > li > a:visited {
 .stack-list > li {
   padding: 0.8rem 1.2rem;
   border-radius: 100rem;
-  border: 0.1rem solid #d4e1ff;
-  background-color: #e6ecf8;
-  color: #353535;
+  border: 0.1rem solid var(--color-border-chip);
+  background-color: var(--color-surface-subtle);
+  color: var(--color-text);
   font-size: 1.4rem;
   line-height: 1.2;
   white-space: nowrap;
@@ -382,7 +400,7 @@ ul > li > a:visited {
 }
 .niv-comp {
   margin-left: 1rem;
-  color: #6e6e6e;
+  color: var(--color-text-muted);
   font-size: 1.4rem;
 }
 /* -------------------------*/
@@ -426,13 +444,13 @@ ul > li > a:visited {
   width: 100%;
 }
 .about-me-card {
-  background-color: #ffffffcf;
+  background-color: var(--color-surface);
   justify-content: center;
   flex-direction: column;
   width: 57rem;
   height: 43rem;
 
-  box-shadow: 0 0.1rem 0.2rem #888;
+  box-shadow: 0 0.1rem 0.2rem var(--color-shadow);
 
   border-radius: 1rem;
 }
@@ -464,13 +482,13 @@ ul > li > a:visited {
   padding: 2rem;
   border-radius: 1rem;
   transition: ease-out 0.4s;
-  box-shadow: 0 0.1rem 0.2rem #888;
+  box-shadow: 0 0.1rem 0.2rem var(--color-shadow);
 
-  background-color: #ffffffcf;
+  background-color: var(--color-surface);
 }
 .article-box:hover {
-  background-color: #fff;
-  box-shadow: 0 0.1rem 0.2rem #888;
+  background-color: var(--color-surface-solid);
+  box-shadow: 0 0.1rem 0.2rem var(--color-shadow);
 
   transform: translate(0, -8%);
 }
@@ -493,8 +511,8 @@ ul > li > a:visited {
   height: 6rem;
   width: 6rem;
   padding: 1rem;
-  fill: #fff;
-  background-color: #407ab0;
+  fill: var(--color-text-inverse);
+  background-color: var(--color-primary-alt);
   border-radius: 50%;
 }
 
@@ -507,14 +525,14 @@ ul > li > a:visited {
   border-radius: 1rem;
   height: 100%;
 
-  background-color: #ffffff93;
+  background-color: var(--color-surface-soft);
 
   transition: ease-in-out 0.4s;
-  box-shadow: 0 0.1rem 0.2rem #888;
+  box-shadow: 0 0.1rem 0.2rem var(--color-shadow);
 }
 .about-item:hover {
-  box-shadow: 0 0.1rem 0.5rem #888;
-  background-color: #d4e1ff;
+  box-shadow: 0 0.1rem 0.5rem var(--color-shadow);
+  background-color: var(--color-surface-hover);
 }
 .about-item > h3 {
   align-self: center;
@@ -534,8 +552,8 @@ ul > li > a:visited {
 .cta-link.about-btn-contact {
   justify-content: center;
   border-radius: 15rem;
-  color: #0b60b0;
-  background-color: #407ab0;
+  color: var(--color-primary);
+  background-color: var(--color-primary-alt);
 }
 /* ----------------------------- */
 /* ABOUT ME / CONCERNANT END  */
@@ -574,15 +592,15 @@ ul > li > a:visited {
   justify-items: center;
 }
 .text-grid > p {
-  background-color: #ffffffcf;
+  background-color: var(--color-surface);
   padding: 3rem;
   border-radius: 2rem;
   transition: ease-in-out 0.4s;
-  box-shadow: 0 0.1rem 0.5rem #888;
+  box-shadow: 0 0.1rem 0.5rem var(--color-shadow);
 }
 .text-grid > p:hover {
   transform: translate(0, -8%);
-  background-color: #fff;
+  background-color: var(--color-surface-solid);
 }
 .btn-project.flex-container {
   margin-top: 2rem;
@@ -625,13 +643,13 @@ ul > li > a:visited {
   background-repeat: no-repeat;
   height: 30vh;
   border-radius: 4rem;
-  color: #fff;
+  color: var(--color-text-inverse);
   cursor: pointer;
   flex: 0.5;
   margin: 10px;
   position: relative;
   transition: flex 0.5s ease-in;
-  box-shadow: 0 0.1rem 0.5rem #888;
+  box-shadow: 0 0.1rem 0.5rem var(--color-shadow);
 }
 .panel1 {
   background-image: url("../assets/projects/omnifood-1.avif");
@@ -676,16 +694,16 @@ ul > li > a:visited {
 /* GLOBAL SETTING  */
 h1 {
   font-size: 3.4rem;
-  color: #0b60b0;
+  color: var(--color-primary);
   cursor: default;
 }
 h2 {
-  color: #0b60b0;
+  color: var(--color-primary);
   font-size: 2.4rem;
   cursor: default;
 }
 h3 {
-  color: #0b60b0;
+  color: var(--color-primary);
   font-size: 2rem;
   font-weight: 400;
   cursor: default;
@@ -695,7 +713,7 @@ h4 {
   cursor: default;
 }
 P {
-  color: #353535;
+  color: var(--color-text);
   font-size: 1.6rem;
   letter-spacing: 0.075rem;
   line-height: 1.9rem;
@@ -704,9 +722,9 @@ P {
   font-size: 1.6rem;
   padding: 0.8rem 2.3rem;
   border-radius: 5rem;
-  background-color: #fff;
-  border: 0.1rem solid #353535;
-  color: #353535;
+  background-color: var(--color-surface-solid);
+  border: 0.1rem solid var(--color-border-default);
+  color: var(--color-text);
   transition: 0.2s ease-in-out;
 }
 .btn:link,
@@ -715,30 +733,29 @@ P {
   justify-content: center;
 }
 .btn-contact {
-  color: #fff;
+  color: var(--color-text-inverse);
   /* background-color: #000; */
-  background-color: #6da0d0;
-  border-color: #6da0d0;
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
 }
 .btn-contact:hover {
-  color: #000;
-  border-color: #000;
-  background-color: #fff;
+  color: var(--color-text-strong);
+  border-color: var(--color-text-strong);
+  background-color: var(--color-surface-solid);
 }
 .btn-cv {
   gap: 1rem;
-  background-color: #0b60b0;
-  border: 0.1rem solid #0b60b0;
-  color: #fff;
-  box-shadow: 0 0.1rem 0.5rem #888;
+  background-color: var(--color-primary);
+  border: 0.1rem solid var(--color-primary);
+  color: var(--color-text-inverse);
+  box-shadow: 0 0.1rem 0.5rem var(--color-shadow);
   justify-content: center;
   align-items: center;
 }
 .btn-cv:hover {
-  background-color: #0b60b0;
-  color: #fff;
-  border: #0b60b0;
-  border: 0.1rem solid #0b60b0;
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  border: 0.1rem solid var(--color-primary);
 }
 .btn:hover {
   cursor: pointer;
@@ -772,13 +789,13 @@ P {
 .logo {
   width: 6.6rem;
   height: 6.6rem;
-  background-color: #407ab0;
+  background-color: var(--color-primary-alt);
   padding: 1rem;
-  fill: #fff;
+  fill: var(--color-text-inverse);
   border-radius: 50rem;
 }
 .logo-competance {
-  fill: #407ab0;
+  fill: var(--color-primary-alt);
   padding: 0.1rem;
   border-radius: 50rem;
   width: 3rem;
@@ -799,21 +816,21 @@ P {
   align-items: center;
   width: 45%;
   gap: 5rem;
-  background-color: #fff;
+  background-color: var(--color-surface-solid);
   padding: 6rem 15rem;
   margin: auto;
   top: -9rem;
   border-radius: 2rem;
-  box-shadow: 0 0.1rem 0.5rem #888;
+  box-shadow: 0 0.1rem 0.5rem var(--color-shadow);
   padding: 5rem;
   justify-content: space-between;
 }
 
 .cta-text {
-  color: #353535;
+  color: var(--color-text);
 }
 .cta-section > h3 {
-  color: #0b60b0;
+  color: var(--color-primary);
   font-size: 3rem;
   font-weight: 600;
 }
@@ -826,7 +843,7 @@ P {
   gap: 1rem;
   padding: 0.8rem 2.3rem;
   border-radius: 2rem;
-  background-color: #407ab0;
+  background-color: var(--color-primary-alt);
 }
 .contact-svg {
   width: 2.4rem;
@@ -835,21 +852,21 @@ P {
 }
 .download-svg {
   stroke: currentColor;
-  color: #fff;
+  color: var(--color-text-inverse);
 }
 .cta-link:link,
 .cta-link:visited {
-  color: #fff;
+  color: var(--color-text-inverse);
   font-size: 1.6rem;
   text-decoration: none;
   transition: 0.6s;
-  box-shadow: 0 0.1rem 0.5rem #888;
+  box-shadow: 0 0.1rem 0.5rem var(--color-shadow);
 }
 
 .cta-link:link:hover,
 .cta-link:visited:hover {
-  color: #0b60b0;
-  background-color: #fff;
+  color: var(--color-primary);
+  background-color: var(--color-surface-solid);
   border: none;
 }
 
@@ -870,7 +887,7 @@ footer {
   background-repeat: repeat;
   background-size: contain;
 
-  border-top: #0b60b0 solid 0.5rem;
+  border-top: var(--color-primary) solid 0.5rem;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -939,12 +956,16 @@ footer {
   gap: 6rem;
 }
 footer > p {
-  color: #fff;
+  color: var(--color-text-inverse);
   font-size: 1.4rem;
   font-weight: 500;
   width: 100%;
   padding: 0.5rem;
-  background: linear-gradient(to left, #0b60b0, #6da0d0 80%);
+  background: linear-gradient(
+    to left,
+    var(--color-primary),
+    var(--color-accent) 80%
+  );
   justify-content: center;
   align-items: center;
 }

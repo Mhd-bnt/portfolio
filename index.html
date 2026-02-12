@@ -8,8 +8,17 @@
       name="description"
       content="Actuellement à la recherche d'un stage en développement web pour appliquer mes connaissances et contribuer à des projets innovants. Passionné de développement web en quête de défis stimulants, découvrez mon portfolio, regroupant mes projets et compétences."
     />
+    <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/queries.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -312,21 +321,30 @@
           <p class="logo-name">Izzoulah Bentoura</p>
         </div>
         <div class="header-links flex-container">
-          <ul class="main-nav nav-links flex-container">
-            <li>
-              <a href="#accueil">Accueil</a>
-            </li>
-            <li><a href="#about">À propos</a></li>
-            <li><a href="#compétence">Compétences</a></li>
-            <li><a href="#projet">Projets</a></li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-        <button class="btn-mobile-nav" aria-label="menu button">
-          <svg
-            class="hamburger-menu"
+	          <ul class="main-nav nav-links flex-container">
+	            <li>
+	              <a href="#accueil">Accueil</a>
+	            </li>
+	            <li><a href="#about">À propos</a></li>
+	            <li><a href="#compétence">Compétences</a></li>
+	            <li><a href="#projet">Projets</a></li>
+	            <li>
+	              <a href="#contact">Contact</a>
+	            </li>
+	            <li>
+	              <button
+	                id="theme-toggle"
+	                type="button"
+	                aria-label="Basculer le thème"
+	              >
+	                <ion-icon name="moon-outline" aria-hidden="true"></ion-icon>
+	              </button>
+	            </li>
+	          </ul>
+	        </div>
+	        <button class="btn-mobile-nav" aria-label="menu button">
+	          <svg
+	            class="hamburger-menu"
             name="open-menu"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
