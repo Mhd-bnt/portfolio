@@ -789,9 +789,15 @@ P {
 .logo {
   width: 6.6rem;
   height: 6.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.2rem;
+  line-height: 1;
   background-color: var(--color-primary-alt);
   padding: 1rem;
-  fill: var(--color-text-inverse);
+  color: var(--color-text-inverse);
+  fill: currentColor;
   border-radius: 50rem;
 }
 .logo-competance {
