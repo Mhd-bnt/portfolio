@@ -3,6 +3,7 @@
 
   /* Base */
   --color-bg: #ffffff;
+  --color-white: #ffffff;
   --color-surface-solid: #ffffff;
   --color-surface: #ffffffcf;
   --color-surface-soft: #ffffff93;
@@ -10,6 +11,13 @@
   --color-surface-hover: #d4e1ff;
   --color-surface-subtle: #e6ecf8;
   --color-hero-circle: #cedfef;
+
+  /* Card tokens */
+  --card-padding: 3.2rem;
+  --card-radius: 12px;
+  --card-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  --card-border: 1px solid rgba(0, 0, 0, 0.08);
+  --card-bg: var(--color-white);
 
   /* Text */
   --color-text: #353535;
@@ -43,6 +51,11 @@ body.dark-mode {
   --color-surface-hover: rgb(96 165 250 / 15%);
   --color-surface-subtle: #0f172a;
   --color-hero-circle: #0f172a;
+
+  /* Card tokens */
+  --card-bg: var(--color-surface-solid);
+  --card-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  --card-border: 1px solid rgba(255, 255, 255, 0.1);
 
   /* Text */
   --color-text: #e5e7eb;

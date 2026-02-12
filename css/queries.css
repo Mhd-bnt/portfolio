@@ -112,7 +112,6 @@
   .cart-item {
     width: 100%;
     max-width: 60rem;
-    border: var(--color-border-subtle) solid 0.1rem;
     align-items: center;
   }
   .footer-img {
@@ -338,7 +337,6 @@
     width: 100%;
   }
   .cart-item {
-    padding: 4rem;
     width: 100%;
   }
 }

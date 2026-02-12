@@ -321,10 +321,12 @@ ul > li > a:visited {
 .competence-text-box {
   height: 100%;
   position: relative;
-  background-color: var(--color-surface);
-  padding: 2.4rem;
-  border-radius: 1rem;
-  box-shadow: 0 0.1rem 0.5rem var(--color-shadow);
+  background-color: var(--card-bg);
+  padding: var(--card-padding);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  border: var(--card-border);
+  transition: all 0.3s ease-in-out;
 }
 .competence-text-box > h3 {
   position: absolute;
@@ -355,11 +357,13 @@ ul > li > a:visited {
   text-align: center;
 }
 .cart-item {
-  border-radius: 2.5rem;
+  border-radius: var(--card-radius);
   overflow: hidden;
-  padding: 4rem;
-  border: var(--color-border-subtle) solid 0.1rem;
-  background-color: var(--color-surface);
+  padding: var(--card-padding);
+  background-color: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  border: var(--card-border);
+  transition: all 0.3s ease-in-out;
   flex-direction: column;
   gap: 3rem;
   height: 100%;
@@ -444,15 +448,16 @@ ul > li > a:visited {
   width: 100%;
 }
 .about-me-card {
-  background-color: var(--color-surface);
+  background-color: var(--card-bg);
+  padding: var(--card-padding);
+  gap: 2.4rem;
   justify-content: center;
   flex-direction: column;
-  width: 57rem;
-  height: 43rem;
-
-  box-shadow: 0 0.1rem 0.2rem var(--color-shadow);
-
-  border-radius: 1rem;
+  width: min(57rem, 100%);
+  box-shadow: var(--card-shadow);
+  border-radius: var(--card-radius);
+  border: var(--card-border);
+  transition: all 0.3s ease-in-out;
 }
 .abt-me-img-box {
   justify-content: center;
@@ -462,10 +467,8 @@ ul > li > a:visited {
 }
 .about-me-heading {
   text-align: center;
-  padding: 2.5rem;
 }
 .about-me-card-txt {
-  padding: 2.5rem;
   text-align: center;
 }
 .article-container {
@@ -479,16 +482,16 @@ ul > li > a:visited {
   align-items: center;
   gap: 2rem;
   flex-direction: column;
-  padding: 2rem;
-  border-radius: 1rem;
-  transition: ease-out 0.4s;
-  box-shadow: 0 0.1rem 0.2rem var(--color-shadow);
-
-  background-color: var(--color-surface);
+  padding: var(--card-padding);
+  border-radius: var(--card-radius);
+  transition: all 0.3s ease-in-out;
+  box-shadow: var(--card-shadow);
+  border: var(--card-border);
+  background-color: var(--card-bg);
 }
 .article-box:hover {
-  background-color: var(--color-surface-solid);
-  box-shadow: 0 0.1rem 0.2rem var(--color-shadow);
+  background-color: var(--card-bg);
+  box-shadow: var(--card-shadow);
 
   transform: translate(0, -8%);
 }
@@ -520,18 +523,17 @@ ul > li > a:visited {
   position: relative;
   flex-direction: column;
   gap: 4rem;
-  padding: 5rem;
-  transition: ease-in-out 0.3s;
-  border-radius: 1rem;
+  padding: var(--card-padding);
+  transition: all 0.3s ease-in-out;
+  border-radius: var(--card-radius);
   height: 100%;
 
-  background-color: var(--color-surface-soft);
-
-  transition: ease-in-out 0.4s;
-  box-shadow: 0 0.1rem 0.2rem var(--color-shadow);
+  background-color: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  border: var(--card-border);
 }
 .about-item:hover {
-  box-shadow: 0 0.1rem 0.5rem var(--color-shadow);
+  box-shadow: var(--card-shadow);
   background-color: var(--color-surface-hover);
 }
 .about-item > h3 {
@@ -589,18 +591,7 @@ ul > li > a:visited {
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
 
-  justify-items: center;
-}
-.text-grid > p {
-  background-color: var(--color-surface);
-  padding: 3rem;
-  border-radius: 2rem;
-  transition: ease-in-out 0.4s;
-  box-shadow: 0 0.1rem 0.5rem var(--color-shadow);
-}
-.text-grid > p:hover {
-  transform: translate(0, -8%);
-  background-color: var(--color-surface-solid);
+  justify-items: stretch;
 }
 .btn-project.flex-container {
   margin-top: 2rem;
@@ -837,6 +828,14 @@ P {
   box-shadow: 0 0.1rem 0.5rem var(--color-shadow);
   padding: 5rem;
   justify-content: space-between;
+}
+#contact {
+  background-color: var(--card-bg);
+  padding: var(--card-padding);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  border: var(--card-border);
+  transition: all 0.3s ease-in-out;
 }
 
 .cta-text {
