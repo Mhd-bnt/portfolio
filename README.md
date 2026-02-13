@@ -2,72 +2,78 @@
 
 ## FR 🇫🇷
 
-Portfolio **one-page** réalisé en **HTML / CSS / JS vanilla** (sans framework).
+Portfolio **one-page** réalisé en **HTML / CSS / JavaScript vanilla** (sans framework).
 
 **Démo :** https://stage-portfolio.netlify.app/
 
 ### Fonctionnalités
 
-- Site **one-page** avec navigation par sections (ancres `#...`)
-- Design **responsive**
-- Animations / interactions simples en JavaScript
-- Section projets + contact + liens (CV / GitHub / etc.)
+- Site one-page avec navigation par sections (ancres `#...`)
+- Design responsive
+- Interactions simples en JavaScript (menu / scroll / etc.)
 
-### Structure
+### Structure du projet
 
-- `index.html` — contenu principal
-- `style.css` — styles
-- `script.js` — interactions (menu, scroll, etc.)
-- `assets/` — images, CV, fichiers statiques
+- `index.html` — page principale
+- `script.js` — interactions JavaScript
+- `css/` — styles séparés par rôle :
+  - `css/variables.css` — variables / couleurs / thème (ex: dark mode)
+  - `css/fonts.css` — polices + variables de typographie
+  - `css/styles.css` — styles principaux (layout, sections, composants)
+  - `css/queries.css` — responsive (media queries)
+- `assets/` — images, icônes, CV, fichiers statiques
 
 ### Lancer en local
 
-Option 1 (simple) :
+Option 1 :
 
 1. Cloner le repo
 2. Ouvrir `index.html` dans le navigateur
 
-Option 2 (recommandé) :
+Option 2 :
 
-- Ouvrir le projet dans VS Code et lancer **Live Server**
+- VS Code → extension **Live Server**
 
 ### Déploiement
 
-Déployable facilement sur **Netlify** ou **GitHub Pages** (site statique).
+Projet statique : déployable sur **Netlify** ou **GitHub Pages**.
 
 ---
 
 ## EN 🇬🇧
 
-A **one-page** portfolio built with **vanilla HTML / CSS / JavaScript** (no framework).
+**One-page** portfolio built with **vanilla HTML / CSS / JavaScript** (no framework).
 
 **Live demo:** https://stage-portfolio.netlify.app/
 
 ### Features
 
-- **One-page** layout with section navigation (anchors `#...`)
-- **Responsive** design
-- Simple JavaScript interactions (menu, scroll, etc.)
-- Projects + contact + useful links (CV / GitHub / etc.)
+- One-page layout with section navigation (anchors `#...`)
+- Responsive design
+- Simple JavaScript interactions (menu / scroll / etc.)
 
 ### Project structure
 
 - `index.html` — main page
-- `style.css` — styling
-- `script.js` — interactions (menu, scroll, etc.)
-- `assets/` — images, resume, static files
+- `script.js` — JavaScript interactions
+- `css/` — styles split by purpose:
+  - `css/variables.css` — variables / colors / theme (e.g. dark mode)
+  - `css/fonts.css` — fonts + typography variables
+  - `css/styles.css` — main styles (layout, sections, components)
+  - `css/queries.css` — responsive (media queries)
+- `assets/` — images, icons, resume, static files
 
 ### Run locally
 
-Option 1 (simple):
+Option 1:
 
 1. Clone the repo
 2. Open `index.html` in your browser
 
-Option 2 (recommended):
+Option 2 :
 
-- Open in VS Code and use **Live Server**
+- VS Code → **Live Server**
 
 ### Deployment
 
-Easy to deploy on **Netlify** or **GitHub Pages** (static site).
+Static website: easy to deploy on **Netlify** or **GitHub Pages**.
