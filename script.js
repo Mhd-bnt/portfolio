@@ -194,6 +194,86 @@ projectNextBtn?.addEventListener("click", () =>
 if (projectSlides.length > 0) {
   goToProject(0);
 }
+
+// ABOUT CAROUSEL
+const aboutTrack = document.getElementById("about-carousel-track");
+const aboutPrevBtn = document.getElementById("about-prev-btn");
+const aboutNextBtn = document.getElementById("about-next-btn");
+const aboutCards = aboutTrack
+  ? Array.from(aboutTrack.querySelectorAll(":scope > .about-item"))
+  : [];
+
+let aboutCardsPerSlide = 2;
+let aboutSlideCount = 0;
+let aboutCurrentIndex = 0;
+
+function getAboutCardsPerSlide() {
+  return window.matchMedia("(max-width: 72em)").matches ? 1 : 2;
+}
+
+function goToAboutSlide(index, animate = true) {
+  if (!aboutTrack || aboutSlideCount === 0) return;
+
+  aboutCurrentIndex = ((index % aboutSlideCount) + aboutSlideCount) % aboutSlideCount;
+
+  if (!animate) {
+    aboutTrack.style.transition = "none";
+  }
+
+  aboutTrack.style.transform = `translateX(-${aboutCurrentIndex * 100}%)`;
+
+  if (!animate) {
+    requestAnimationFrame(() => {
+      aboutTrack.style.transition = "";
+    });
+  }
+}
+
+function buildAboutSlides() {
+  if (!aboutTrack || aboutCards.length === 0) return;
+
+  const nextCardsPerSlide = getAboutCardsPerSlide();
+  const firstVisibleCardIndex = aboutCurrentIndex * aboutCardsPerSlide;
+
+  aboutCardsPerSlide = nextCardsPerSlide;
+  aboutTrack.innerHTML = "";
+
+  for (let index = 0; index < aboutCards.length; index += aboutCardsPerSlide) {
+    const slide = document.createElement("div");
+    slide.className = "about-carousel-slide";
+
+    const cardsWrapper = document.createElement("div");
+    cardsWrapper.className = "about-carousel-cards";
+
+    for (let offset = 0; offset < aboutCardsPerSlide; offset += 1) {
+      const card = aboutCards[index + offset];
+      if (!card) break;
+      cardsWrapper.appendChild(card);
+    }
+
+    slide.appendChild(cardsWrapper);
+    aboutTrack.appendChild(slide);
+  }
+
+  aboutSlideCount = Math.ceil(aboutCards.length / aboutCardsPerSlide);
+  const safeCardIndex = Math.min(firstVisibleCardIndex, aboutCards.length - 1);
+  aboutCurrentIndex = Math.floor(safeCardIndex / aboutCardsPerSlide);
+  goToAboutSlide(aboutCurrentIndex, false);
+  aboutTrack.classList.add("is-ready");
+}
+
+aboutPrevBtn?.addEventListener("click", () => goToAboutSlide(aboutCurrentIndex - 1));
+aboutNextBtn?.addEventListener("click", () => goToAboutSlide(aboutCurrentIndex + 1));
+
+if (aboutTrack && aboutCards.length > 0) {
+  buildAboutSlides();
+
+  let aboutResizeFrame;
+  window.addEventListener("resize", () => {
+    cancelAnimationFrame(aboutResizeFrame);
+    aboutResizeFrame = requestAnimationFrame(buildAboutSlides);
+  });
+}
 // OPEN-NAV MOBILE NAVIGATION
 const btnNav = document.querySelector(".btn-mobile-nav");
 
