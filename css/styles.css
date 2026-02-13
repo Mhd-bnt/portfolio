@@ -109,6 +109,15 @@ nav {
   background: none;
   cursor: pointer;
 }
+.btn-mobile-nav:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.btn-mobile-nav:focus-visible {
+  outline: 2px solid var(--color-primary) !important;
+  outline-offset: 4px;
+}
 
 .hamburger-menu {
   width: 4rem;
@@ -181,6 +190,15 @@ ul > li > a:visited {
   background: transparent;
   color: var(--color-text-strong);
   cursor: pointer;
+}
+#theme-toggle:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+#theme-toggle:focus-visible {
+  outline: 2px solid var(--color-primary) !important;
+  outline-offset: 4px;
 }
 #theme-toggle:hover {
   color: var(--color-primary);

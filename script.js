@@ -29,14 +29,20 @@ function removeActiveClasses() {
 }
 // OPEN-NAV MOBILE NAVIGATION
 const btnNav = document.querySelector(".btn-mobile-nav");
-const header = document.querySelector(".nav-bar");
-const navLinks = document.querySelector(".main-nav");
 
-btnNav.addEventListener("click", function () {
-  header.classList.toggle("nav-open");
+btnNav?.addEventListener("click", function () {
+  nav?.classList.toggle("nav-open");
 });
-navLinks.addEventListener("click", function () {
-  header.classList.toggle("nav-open");
+
+nav?.addEventListener("click", function (event) {
+  if (!nav.classList.contains("nav-open")) return;
+
+  const target = event.target;
+  if (!(target instanceof Element)) return;
+
+  if (target.closest(".btn-mobile-nav")) return;
+
+  nav.classList.remove("nav-open");
 });
 
 // THEME TOGGLE
