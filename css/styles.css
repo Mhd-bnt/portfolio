@@ -684,7 +684,7 @@ ul > li > a:visited {
   font-size: 1.8rem;
   letter-spacing: -0.01em;
 }
-@media (min-width: 72.01em) {
+@media (min-width: 72.0625em) {
   #about {
     min-height: 100vh;
     min-height: 100dvh;
