@@ -932,7 +932,13 @@ footer {
   font-size: 1.6rem;
 }
 .footer-text-about {
-  text-align: justify;
+  text-align: left;
+  font-family: var(--font-body);
+  width: 100%;
+  max-width: 44rem;
+}
+.footer-text-about p {
+  line-height: var(--line-height-body);
 }
 .contact-info-container {
   flex-direction: column;
