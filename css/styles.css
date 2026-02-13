@@ -581,6 +581,9 @@ ul > li > a:visited {
   transition: transform 0.35s ease;
   will-change: transform;
 }
+#about .about-carousel-track:not(.is-ready) {
+  visibility: hidden;
+}
 #about .about-carousel-slide {
   flex: 0 0 100%;
   box-sizing: border-box;

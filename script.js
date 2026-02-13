@@ -259,6 +259,7 @@ function buildAboutSlides() {
   const safeCardIndex = Math.min(firstVisibleCardIndex, aboutCards.length - 1);
   aboutCurrentIndex = Math.floor(safeCardIndex / aboutCardsPerSlide);
   goToAboutSlide(aboutCurrentIndex, false);
+  aboutTrack.classList.add("is-ready");
 }
 
 aboutPrevBtn?.addEventListener("click", () => goToAboutSlide(aboutCurrentIndex - 1));
