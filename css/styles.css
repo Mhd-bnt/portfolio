@@ -723,23 +723,14 @@ ul > li > a:visited {
 }
 #about .about-item-list {
   align-self: center;
-  width: 100%;
+  width: min(100%, 50rem);
   max-width: 100%;
-  align-items: center;
+  align-items: stretch;
 }
 #about .about-item-list > li {
-  width: fit-content;
+  width: 100%;
   max-width: 100%;
-}
-@media (max-width: 72em) {
-  #about .about-item-list {
-    width: min(100%, 50rem);
-    align-items: stretch;
-  }
-  #about .about-item-list > li {
-    width: 100%;
-    max-width: 100%;
-  }
+  text-align: left;
 }
 .about-btn-container {
   display: flex;
