@@ -306,20 +306,27 @@ ul > li > a:visited {
 /* COMPETENCE START*/
 /* -------------------------*/
 .section-competence {
+  min-height: 100vh;
+  min-height: 100dvh;
+  scroll-margin-top: 10rem;
+  padding: 12rem 0 8rem;
   margin-bottom: var(--section-spacing);
 }
 .competence-header {
   flex-direction: column;
   align-items: center;
-  padding: 15rem 0;
+  padding: 0 0 6rem;
 }
 .competence-container {
   display: grid;
-  justify-items: center;
-  grid-template-columns: 1fr;
-  row-gap: 10rem;
-  align-items: center;
-  width: 100%;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: stretch;
+  row-gap: 4rem;
+  column-gap: 9rem;
+  width: min(177rem, 100%);
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
 }
 
 .competence-header > p {
@@ -327,52 +334,53 @@ ul > li > a:visited {
 }
 
 .competence-text-container {
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-
-  gap: 4rem;
-  row-gap: 6rem;
-  width: 60%;
-}
-
-.competence-text-box {
+  width: 100%;
+  min-width: 0;
   height: 100%;
-  position: relative;
-  background-color: var(--card-bg);
+}
+.competence-text-surface {
+  display: grid;
+  gap: 4.2rem;
   padding: var(--card-padding);
   border-radius: var(--card-radius);
+  background-color: var(--card-bg);
   box-shadow: var(--card-shadow);
   border: var(--card-border);
-  transition: all 0.3s ease-in-out;
+  height: 100%;
 }
-.competence-text-box > h3 {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 0.1rem 0.5rem var(--color-shadow);
-  border-radius: 2.5rem;
-  padding: 1.5rem;
-  width: 75%;
-  margin: 0 auto;
-  background-color: var(--color-surface-solid);
+.competence-text-item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 1.4rem;
+  align-items: start;
 }
-.competence-text-box p {
-  margin-top: 3rem;
-
+.competence-item-icon {
+  font-size: 2.4rem;
+  color: var(--color-primary);
+  margin-top: 0.2rem;
+}
+.competence-item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.competence-item-content > p {
   color: var(--color-text);
+  margin: 0;
 }
 .competence-cart {
-  width: min(110rem, 100%);
-  margin: 0 auto;
-  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  width: 100%;
+  margin: 0;
+  padding: 0;
   justify-items: stretch;
   align-items: stretch;
+  align-content: stretch;
   gap: 3rem;
-}
-.competence-cart-heading {
-  text-align: center;
+  min-width: 0;
+  height: 100%;
 }
 .cart-item {
   border-radius: var(--card-radius);

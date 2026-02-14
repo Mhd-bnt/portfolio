@@ -35,9 +35,6 @@
   .about-table {
     grid-template-columns: repeat(2, 1fr);
   }
-  .competence-text-container {
-    width: 80%;
-  }
   .footer-menu {
     grid-template-columns: 1fr 1fr;
     row-gap: 2rem;
@@ -65,6 +62,24 @@
     grid-template-columns: 1fr;
     width: 60%;
   }
+  #compétence.section-competence {
+    padding: 10rem 0 7rem;
+  }
+  #compétence .competence-header {
+    padding-bottom: 4.8rem;
+  }
+  #compétence .competence-container {
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
+  }
+  #compétence .competence-text-container,
+  #compétence .competence-cart {
+    height: auto;
+  }
+  #compétence .competence-cart {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
 }
 /* BREAKPOINT 1104 PX  */
 @media (max-width: 69em) {
@@ -81,23 +96,10 @@
   .logo-header {
     display: flex;
   }
-  .competence-text-container {
+  #compétence .cart-item {
     width: 100%;
-    justify-items: center;
-    column-gap: 2rem;
-    padding: 4rem;
-  }
-  .competence-text-box {
-    width: 100%;
-  }
-  .competence-cart {
-    grid-template-columns: 1fr;
-    box-shadow: none;
-  }
-  .cart-item {
-    width: 100%;
-    max-width: 60rem;
-    align-items: center;
+    max-width: none;
+    align-items: stretch;
   }
   .footer-img {
     display: none;
@@ -158,19 +160,7 @@
     background-color: var(--color-surface-subtle);
     padding: 5rem;
   }
-  .competence-cart {
-    width: 100%;
-    background-color: var(--color-surface-subtle);
-    border-top: var(--color-primary) solid 0.5rem;
-    border-bottom: var(--color-primary) solid 0.5rem;
-    padding: 5rem;
-    border-radius: 0;
-    justify-items: center;
-  }
   .background-svg {
-    background: none;
-  }
-  .competence-container {
     background: none;
   }
   .cta-section {
@@ -208,9 +198,6 @@
   .hero-description {
     gap: 2rem;
   }
-  .competence-text-box {
-    width: 80%;
-  }
   .cta-section {
     width: 75%;
     gap: 3rem;
@@ -223,12 +210,6 @@
 
 /* BREAKPOINT 780PX   */
 @media (max-width: 780px) {
-  .competence-text-container {
-    grid-template-columns: 1fr;
-  }
-  .competence-text-box {
-    width: 70%;
-  }
 }
 
 /* BREAKPOINT 754PX   */
@@ -263,12 +244,15 @@
   .about-table {
     grid-template-columns: 1fr;
   }
-  .competence-text-box {
-    width: 80%;
-  }
-
   .cart-item {
     width: 100%;
+  }
+
+  #compétence.section-competence {
+    padding: 9rem 0 6rem;
+  }
+  #compétence .competence-container {
+    padding: 0 1.6rem;
   }
 
 }
@@ -370,9 +354,6 @@
   .hero-title {
     padding: 0 1rem;
   }
-  .competence-text-box > h3 {
-    width: 85%;
-  }
   .btn-container,
   .about-btn-container {
     margin-top: 0;
@@ -393,18 +374,12 @@
     /* :center ; */
     width: 21rem;
   }
-  .competence-cart {
-    padding: 2rem;
-  }
 }
 /* BREAKPOINT 376PX  */
 @media (max-width: 24em) {
   .hero.flex-container {
     flex-direction: column;
     gap: 1rem;
-  }
-  .competence-text-box > h3 {
-    width: 85%;
   }
   .about-me-card {
     width: 95%;
